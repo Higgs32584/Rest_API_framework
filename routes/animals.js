@@ -1,29 +1,20 @@
+import description from 'C:/Users/mjhig/.anaconda/Rest API framework/file.py'
+
+
+
 const express= require('express')
 const router= express.Router()
 
 //Getting data from API
 router.get('/',(req,res) => {
-    res.send('Hello World!')
+    res.send('choose a number 1-10 for an animal!')
 
 
 })
 router.get('/:id',(req,res) =>{
     
-    res.send(req.params.id)
-})
-//Sending data to the API
-router.post('/', (req,res) => {
+    res.send(description)
     
+})
 
-})
-//Updating Data from the API
-router.patch('/:id', (req,res) => {
-    
-    
-})
-//Deleting Data from the API
-router.delete('/:id', (req,res) => {
-    
-    
-})
 module.exports = router
