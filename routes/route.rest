@@ -1,4 +1,13 @@
-GET http://localhost:3000/animals
 
 ###
-GET http://localhost:3000/animals/123
+POST http://localhost:3000/animals
+Content-Type: application/json
+
+{
+    "name":"amazing person",
+    "description":"yes sir"
+}
+###
+
+GET http://localhost:3000/animals/6196cd60ad072847a44c58ae
+
