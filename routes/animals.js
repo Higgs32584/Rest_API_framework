@@ -1,14 +1,19 @@
 const express = require('express')
-const router= express.Router()
+const router = express.Router()
 const Animal = require('../models/animal')
 //let animalModel = mongoose.model("Incident",animalSchema);
 
 //Getting data from API
 router.get('/:id', async (req, res) => {
+  if(req.params.id == 0){
+    let new_test = await Animal.find().exec()
+    res.json(new_test);
+  }
+  else{
   let query = await Animal.findOne( {id : req.params.id}).exec();
-  res.json(query)
+  res.json(query)}
+  
 })
-
 router.post('/load', async (req, res) => {
   name_array=["Giraffe","GreyHound","Zebra","Elephant","Squirrel","Crow","Cat","Deer","Hyena","Bear"]
   description_array=["Has a very Long Neck!!","The Best animal out there ;)","Has a lot stripes!","Has a very Long snout,also very big!!","Steals your acorns!", "Crows a lot!!","likes fish,also complains a lot","looks in headlights a lot!","Evil Henchmen in Lion King","Likes Honey!"]

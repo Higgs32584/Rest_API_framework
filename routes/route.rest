@@ -1,5 +1,5 @@
-###
+### SEND THIS REQUEST FIRST AFTER DOWNLOADING THE DEPENDENCIES. 
 POST http://localhost:3000/animals/load
-###
-GET http://localhost:3000/animals/10
+### YOU CAN THEN SEARCH FOR AN ENTRY FROM 1-10 TO PRINT ALL, DO 0
+GET http://localhost:3000/animals/0
 ###
