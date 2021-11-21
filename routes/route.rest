@@ -1,13 +1,5 @@
-
 ###
-POST http://localhost:3000/animals
-Content-Type: application/json
-
-{
-    "name":"amazing person",
-    "description":"yes sir"
-}
+POST http://localhost:3000/animals/load
 ###
-
-GET http://localhost:3000/animals/6196cd60ad072847a44c58ae
-
+GET http://localhost:3000/animals/10
+###
